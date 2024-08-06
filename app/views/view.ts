@@ -6,7 +6,7 @@ export class View <T>{
   }
 
   template(model: T): string{
-    throw Error('Sobreescrever');
+    throw Error('Sobreescrever na classe filha');
   }
 
   update(model: T): void{

@@ -3,7 +3,7 @@ export class View {
         this.elemento = document.querySelector(seletor);
     }
     template(model) {
-        throw Error('Sobreescrever');
+        throw Error('Sobreescrever na classe filha');
     }
     update(model) {
         const template = this.template(model);
