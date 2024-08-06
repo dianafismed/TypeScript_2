@@ -13,14 +13,14 @@ export class NegociacoesView {
         </tr>
       </thead>
       <tbody>
-      ${model.lista().map(negociacao => {
+        ${model.lista().map(negociacao => {
             return `
-        <tr>
-          <td>${this.formatar(negociacao.data)}</td>
-          <td>${negociacao.quantidade}</td>
-          <td>${negociacao.valor}</td>
-        </tr>
-        `;
+          <tr>
+            <td>${this.formatar(negociacao.data)}</td>
+            <td>${negociacao.quantidade}</td>
+            <td>${negociacao.valor}</td>
+          </tr>
+          `;
         }).join('')}
       </tbody>
     </table>

@@ -2,14 +2,12 @@ export class Negociacoes {
     constructor() {
         this.negociacoes = [];
     }
-    // ou private negociacoes: Negociacao [] = []
+    // ou private negociacoes: Array<Negociacao> = []
     adiciona(negociacao) {
         this.negociacoes.push(negociacao);
     }
     lista() {
-        // ou lista(): readonly Negociacao[]{
+        // ou lista(): ReadonlyArray<Negociacao>{
         return this.negociacoes;
     }
 }
-const negociacoes = new Negociacoes();
-negociacoes.lista().forEach(n => { });
