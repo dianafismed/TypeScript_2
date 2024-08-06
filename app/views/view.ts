@@ -20,6 +20,7 @@ export abstract class View <T>{
 
   public update(model: T): void{
     let template = this.template(model);
+    // prevenindo códigos maliciosos
     if (this.escapar) {
       template = template.replace(/<script>[\s\S]*?<\/script>/, '');
     }
