@@ -14,7 +14,8 @@ export abstract class View <T>{
       this.escapar = escapar;
     }
   }
-
+  
+  // este método será implementado na classe filha
   protected abstract template(model: T): string;
 
   public update(model: T): void{
