@@ -2,7 +2,6 @@ export class View {
     constructor(seletor, escapar) {
         this.escapar = false;
         const elemento = document.querySelector(seletor);
-        // prevenindo códigos maliciosos
         if (elemento) {
             this.elemento = elemento;
         }
@@ -15,7 +14,6 @@ export class View {
     }
     update(model) {
         let template = this.template(model);
-        // prevenindo códigos maliciosos
         if (this.escapar) {
             template = template.replace(/<script>[\s\S]*?<\/script>/, '');
         }
